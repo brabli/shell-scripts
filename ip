@@ -1,5 +1,15 @@
 #!/bin/bash
-IP=$(curl -s ifconfig.me/ip)
-echo "Current IP address: $IP"
+
+IP=$(curl --connect-timeout 1 -s ifconfig.me/ip)
+
+if [ ! $IP ]; then
+    echo 'Failed to fetch IP address.' >&2
+    exit 1
+fi
+
+if [ "$1" != '-s' ]; then
+    echo "Current IP address: $IP"
+fi
+
 echo -n $IP | pbcopy;
-echo "Copied to clipboard!"
+echo "Copied to clipboard!" >&2
