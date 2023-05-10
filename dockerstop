@@ -1,0 +1,8 @@
+#!/bin/bash
+docker ps -q | xargs docker stop
+docker ps
+# docker ps | pcregrep -M -o1 '\n(\w{12})' | xargs docker stop
+
+# Apparently this will work also, and is probably a nicer solultion
+# docker stop $(docker ps -a -q)
+# docker rm $(docker ps -a -q)

@@ -1,0 +1,5 @@
+#!/bin/bash
+IP=$(curl -s ifconfig.me/ip)
+echo "Current IP address: $IP"
+echo -n $IP | pbcopy;
+echo "Copied to clipboard!"
