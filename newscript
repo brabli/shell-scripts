@@ -31,7 +31,7 @@ chmod +x $SCRIPT_PATH
 echo "Successfully created a new script at $SCRIPT_PATH" >&2
 echo "Linking to /usr/local/bin..." >&2
 
-if ln -s $SCRIPT_PATH "/usr/local/bin/$SCRIPT_NAME" >&2; then
+if ! ln -s $SCRIPT_PATH "/usr/local/bin/$SCRIPT_NAME" >&2; then
   echo "Failed to link. Removing any created files..." >&2
   rm $SCRIPT_PATH &> "/dev/null"
   rm "/usr/local/bin/$SCRIPT_NAME" &> /dev/null
