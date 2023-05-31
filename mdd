@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Merge to Develop and Delete
+
+BRANCH=$(git branch --show-current)
+
+git checkout develop && \
+git merge "$BRANCH" && \
+git branch -d "$BRANCH" && \
+git push
+
