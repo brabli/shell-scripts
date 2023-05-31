@@ -41,3 +41,6 @@ Create a temporary Rust playground that opens in VS Code
 
 ### DEPRECATED ~~switch~~
 Switch installed PHP versions using Homebrew
+
+### mdd
+"Merge to Develop and Delete" a git shortcut I use a lot when working on feature branches
