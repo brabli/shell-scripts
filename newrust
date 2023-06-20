@@ -7,7 +7,11 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-cd ~/personal_projects/rust_lang
+if [ "$OSTYPE" = "linux-gnu" ]; then
+  cd ~/projects/
+else
+  cd ~/personal_projects/rust_lang
+fi
 
 if ! cargo new $1 $2; then
   echo "Cargo failed to create a new Rust project, aborting."
