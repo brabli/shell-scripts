@@ -7,11 +7,10 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-if [ "$OSTYPE" = "linux-gnu" ]; then
-  cd ~/projects/
-else
-  cd ~/personal_projects/rust_lang
-fi
+# On my mac I use the latter directory, but I should really clean that up and use generic directories
+DIR="${PROJECTS:-$HOME/personal_projects/rust_lang}"
+
+cd $DIR
 
 if ! cargo new $1 $2; then
   echo "Cargo failed to create a new Rust project, aborting."
