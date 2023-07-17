@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SANDBOX_DIR="$TMPDIR/rust_sandbox"
+SANDBOX_DIR="${TMPDIR:-/tmp}/rust_sandbox"
 
 # -f 'force' flag
 # Removes any existing sandbox before running the command.
