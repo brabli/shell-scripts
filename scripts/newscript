@@ -26,7 +26,6 @@ if ! [ -f $SCRIPT_PATH ]; then
   exit 1
 fi
 
-
 sudo chmod 777 $SCRIPT_PATH
 echo "#!/bin/bash" >> $SCRIPT_PATH
 echo "echo \"$SCRIPT_PATH is running!\"" >> $SCRIPT_PATH
