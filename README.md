@@ -28,7 +28,7 @@ Copy a passage of lorem ipsum to the clipboard
 Create a new Rust project and open in VS Code for editing
 
 ### newscript
-Create a new shell script and open it in VS Code for editing
+Create a new shell script, symlinks it into `/usr/bin/local/` and open it in VS Code for editing
 
 ### reference
 One liner that closes and reopens Reference 4
@@ -44,3 +44,6 @@ Switch installed PHP versions using Homebrew
 
 ### mdd
 "Merge to Develop and Delete" a git shortcut I use a lot when working on feature branches
+
+### script-relink
+Because `newscript` creates a new script and symlinks it, when I pulled down this repo I had all the scripts available but they weren't symlinked so I couldn't run them without modifing my PATH. This script goes through the available scripts and symlinks them, recreating where necessary.
