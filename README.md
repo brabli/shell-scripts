@@ -1,3 +1,6 @@
+# ARCHIVED as of 22/04/2025
+Scripts will be managed from my [dotfiles](https://github.com/brabli/dotfiles) repo from now on.
+
 # Bradley's Scripts
 
 Here are some of my personal scripts. Some of them are very specific to me, others are general utilities that could be of use to anyone.
